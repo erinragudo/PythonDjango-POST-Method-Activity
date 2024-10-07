@@ -2,14 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Lumière Sync</title>
+    <style>
+      body {
+        background-color: #f3e3e4;
+        margin: 0;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      h1 {
+        color: #8b0438;
+      }
+      form {
+        padding: 20px;
+        border-radius: 8px;
+        
+      }
+    </style>
   </head>
   <body>
-    <h1>This is Appointment System</h1>
+    <h1>This is an Appointment System</h1> <br>
     <form action="" method="POST">
       {% csrf_token %}
       {{ form.as_p }}
-      <input type="submit" value="Submit">
+      <button type="submit">Submit</button>
     </form>  
   </body>
 </html>   

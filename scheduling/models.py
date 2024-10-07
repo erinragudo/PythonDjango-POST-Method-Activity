@@ -1,11 +1,11 @@
 from django.db import models
 
 class Appointment(models.Model):
-    appointment_date = models.CharField(max_length=100)
-    appointment_time = models.CharField(max_length=100)
-    client_name = models.CharField(max_length=100)
-    contact_number = models.CharField(max_length=15)
-    employee_availability = models.CharField(max_length=100, blank=True, null=True)
+    Appointment_Date = models.CharField(max_length=100)
+    Appointment_Time = models.CharField(max_length=100)
+    Client_Name = models.CharField(max_length=100)
+    Contact_Number = models.CharField(max_length=15)
+    # employee_availability = models.CharField(max_length=100, blank=True, null=True)
 
     # Service Catalog Dropdown (Brazilian, Haircolor, Haircut)
     BRAZILIAN = 'Brazilian'
@@ -16,7 +16,7 @@ class Appointment(models.Model):
         (HAIRCOLOR, 'Haircolor'),
         (HAIRCUT, 'Haircut'),
     ]
-    service_catalog = models.CharField(max_length=50, choices=SERVICE_CATALOG_CHOICES, default=BRAZILIAN)
+    Service_Catalog = models.CharField(max_length=50, choices=SERVICE_CATALOG_CHOICES, default=BRAZILIAN)
 
     def __str__(self):
-        return f"Appointment for {self.client_name} on {self.appointment_date} at {self.appointment_time}"
+        return f"Appointment for {self.Client_Name} on {self.Appointment_Date} at {self.Appointment_Time}"
